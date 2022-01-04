@@ -1,0 +1,33 @@
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 90%;
+}
+
+.dashboardHeader {
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 2px darkgrey;
+}
+
+button.filter {
+  height: 32px;
+  width: 150px;
+  background-color: white;
+  color: black;
+  font-weight: 500;
+  border: 1px solid whitesmoke;
+  border-radius: 4px;
+  margin-bottom: 0px;
+}
+
+.reset {
+  background-color: 1a73e8;
+}
+
+.headerActions {
+  display: flex;
+  margin: 8px;
+  align-items: center;
+}

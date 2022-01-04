@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Signup from "./components/preAuth/Signup";
+import Login from "./components/preAuth/Login";
+import Dashboard from "./components/dashboard/Dashboard.jsx";
+import { AuthProvider } from "./contexts/AuthContext";
+import RestrictedRoute from "./components/helpers/RestrictedRoute";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Provider } from "react-redux";
+import appStore from "./store/store";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={appStore}>
+      <Router>
+        <AuthProvider>
+          <div className="appContainer">
+            <Routes>
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/login" element={<Login />} />
+              <Route
+                path="/dashboard"
+                element={
+                  <RestrictedRoute>
+                    <Dashboard />
+                  </RestrictedRoute>
+                }
+              />
+            </Routes>
+          </div>
+        </AuthProvider>
+      </Router>
+    </Provider>
   );
 }
 

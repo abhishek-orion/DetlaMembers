@@ -1,0 +1,22 @@
+.grey {
+  background-color: whitesmoke;
+}
+
+table {
+  width: 100%;
+}
+
+tr {
+  height: 40px;
+}
+
+td {
+  width: 10%;
+}
+
+.cellData {
+  display: flex;
+  height: inherit;
+  justify-content: center;
+  align-items: center;
+}

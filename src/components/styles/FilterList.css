@@ -1,0 +1,19 @@
+.filterListPopup {
+  position: absolute;
+  width: 150px;
+  background-color: white;
+  margin-left: 4px;
+  box-shadow: 2px 5px 8px rgba(0, 0, 0, 0.5);
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  height: 32px;
+  border: 1px solid whitesmoke;
+}
+
+.label {
+  padding-left: 2px;
+}

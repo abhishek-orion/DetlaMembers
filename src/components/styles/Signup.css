@@ -1,0 +1,36 @@
+.loginContainer {
+  display: flex;
+  border: 1px solid black;
+  flex-direction: column;
+  border-radius: 4px;
+  width: 20vw;
+  padding: 4px;
+  align-items: "center";
+  justify-content: "center";
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+}
+
+.formField {
+  margin: 4px;
+  height: 32px;
+}
+
+.button {
+  height: 32px;
+  margin: 4px;
+  background-color: #1a73e8;
+  border: none;
+  font-size: 16px;
+  color: white;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

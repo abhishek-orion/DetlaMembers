@@ -1,0 +1,13 @@
+.messageContainer {
+  display: flex;
+  justify-content: center;
+  border-radius: 4px;
+  font-weight: 600;
+  padding: 4px;
+}
+
+.error {
+  background-color: lightcoral;
+  border: 1px solid crimson;
+  color: white;
+}
