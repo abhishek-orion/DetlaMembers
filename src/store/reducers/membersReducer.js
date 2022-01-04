@@ -3,7 +3,7 @@ const memberReducer = (state = [], action) => {
     // add error scenarios
     case "addMember":
       return [...state.members, action.payload];
-    case "fetchMembersSuccess":
+    case "FETCH_MEMBERS_SUCCESS":
       return [...action.payload];
     default:
       return state;

@@ -15,7 +15,7 @@ export const fetchAllMembers = () => {
             });
           });
           dispatch({
-            type: "fetchMembersSuccess",
+            type: "FETCH_MEMBERS_SUCCESS",
             payload: membersList,
           });
         });
@@ -31,12 +31,11 @@ export const addMember = (member) => {
           .collection("users")
           .add(member)
           .then((res) => {
-            dispatch({
-              type: "fetchMembers",
-            });
-            resolve(member);
+            resolve(res);
           });
-      } catch (error) {}
+      } catch (error) {
+        reject(error);
+      }
     });
   };
 };
@@ -52,7 +51,7 @@ export const deleteMember = (memberId) => {
           .then((doc) => {
             doc.ref.delete();
             dispatch({
-              type: "memberDeleteSuccess",
+              type: "DELETE_MEMBER_SUCESS",
             });
             resolve("Member deleted");
           });
